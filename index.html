@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estaciones de Servicio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1, h2 {
+      font-family: 'Roboto', sans-serif;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-placeholder {
+      width: 50px;
+      height: 50px;
+      background-color: #4CAF50;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    select {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 48%;
+      transition: background-color 0.3s ease;
+    }
+
+    select:hover {
+      background-color: #f0f8f5;
+    }
+
+    #map {
+      border-radius: 10px;
+      overflow: hidden;
+      height: 500px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-panel {
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      height: 500px;
+      overflow-y: auto;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 1rem;
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .card span {
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      select {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-placeholder"></div>
+    <h1>Estaciones de Servicio</h1>
+  </header>
+  <main>
+    <div>
+      <div id="map"></div>
+      <div class="controls">
+        <select id="departamentoSelect" onchange="cambiarDepartamento()">
+          <option value="cochabamba">Cochabamba</option>
+          <option value="lapaz">La Paz</option>
+          <option value="santacruz">Santa Cruz</option>
+          <option value="oruro">Oruro</option>
+          <option value="potosi">Potosí</option>
+          <option value="chuquisaca">Chuquisaca</option>
+          <option value="tarija">Tarija</option>
+          <option value="beni">Beni</option>
+          <option value="pando">Pando</option>
+        </select>
+
+        <select id="filtroDisponibilidad" onchange="filtrarDisponibilidad()">
+          <option value="todos">Todos los surtidores</option>
+          <option value="disponibles">Con disponibilidad</option>
+          <option value="sin_disponibilidad">Sin disponibilidad</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="info-panel">
+      <div class="card" id="infoSurtidor">
+        <h2>Información de surtidor seleccionado:</h2>
+        <p><strong>Estación de servicio:</strong> <span id="nombreEstacion">--</span></p>
+        <p><strong>Combustibles ofertados:</strong> <span id="combustiblesEstacion">--</span></p>
+        <p><strong>Cantidades de combustible restante:</strong></p>
+        <ul id="cantidadCombustible">
+          <li><span id="combustible1">--</span></li>
+          <li><span id="combustible2">--</span></li>
+        </ul>
+        <p><strong>Cantidad de fila:</strong> <span id="cantidadFila">--</span></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let map;
+    let markers = [];
+    let estaciones = [];
+    let infowindow;
+
+    const ubicaciones = {
+      cochabamba: { lat: -17.3933887, lng: -66.1577207 },
+      lapaz: { lat: -16.5, lng: -68.119 },
+      santacruz: { lat: -17.7833, lng: -63.1806 },
+      oruro: { lat: -17.9716, lng: -68.1291 },
+      potosi: { lat: -19.5884, lng: -65.755 },
+      chuquisaca: { lat: -19.043, lng: -65.2619 },
+      tarija: { lat: -21.5355, lng: -64.7345 },
+      beni: { lat: -14.8333, lng: -66.7685 },
+      pando: { lat: -11.0234, lng: -66.1832 }
+    };
+
+    async function cargarEstaciones() {
+      const response = await fetch('estaciones.json');
+      estaciones = await response.json();
+      initMap();
+    }
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: ubicaciones["cochabamba"]
+      });
+
+      map.addListener('click', function() {
+        if (infowindow) {
+          infowindow.close();
+        }
+      });
+
+      cargarEstacionesPorDepartamento("cochabamba");
+    }
+
+    function cambiarDepartamento() {
+      const dpto = document.getElementById("departamentoSelect").value;
+      map.setCenter(ubicaciones[dpto]);
+      limpiarMarcadores();
+      cargarEstacionesPorDepartamento(dpto);
+    }
+
+    function cargarEstacionesPorDepartamento(departamento) {
+      estaciones.filter(e => e.departamento === departamento).forEach(e => {
+        const marker = new google.maps.Marker({
+          position: e.posicion,
+          map: map,
+          title: e.nombre
+        });
+
+        marker.addListener("click", () => {
+          if (infowindow) {
+            infowindow.close();
+          }
+          
+          infowindow = new google.maps.InfoWindow({
+            content: `
+              <h3>${e.nombre}</h3>
+              <p><strong>Departamento:</strong> ${e.departamento}</p>
+              <p><strong>Combustibles ofertados:</strong> ${e.combustibles.join(", ")}</p>
+              <p><strong>Cantidades de combustible restante:</strong></p>
+              <ul>
+                ${Object.keys(e.cantidad).map(c => `<li>${c}: ${e.cantidad[c]} lts</li>`).join("")}
+              </ul>
+            `
+          });
+
+          infowindow.open(map, marker);
+          actualizarInformacionSurtidor(e);
+        });
+
+        markers.push(marker);
+      });
+    }
+
+    function limpiarMarcadores() {
+      markers.forEach(m => m.setMap(null));
+      markers = [];
+    }
+
+    function filtrarDisponibilidad() {
+      const filtro = document.getElementById("filtroDisponibilidad").value;
+      const estacionesFiltradas = estaciones.filter(e => {
+        if (filtro === "todos") return true;
+        if (filtro === "disponibles" && Object.values(e.cantidad).some(cantidad => cantidad > 0)) {
+          return true;
+        }
+        if (filtro === "sin_disponibilidad" && Object.values(e.cantidad).every(cantidad => cantidad === 0)) {
+          return true;
+        }
+        return false;
+      });
+      limpiarMarcadores();
+      estacionesFiltradas.forEach(e => {
+        const marker = new google.maps.Marker({
+          position: e.posicion,
+          map: map,
+          title: e.nombre
+        });
+
+        marker.addListener("click", () => {
+          if (infowindow) {
+            infowindow.close();
+          }
+          infowindow = new google.maps.InfoWindow({
+            content: `
+              <h3>${e.nombre}</h3>
+              <p><strong>Departamento:</strong> ${e.departamento}</p>
+              <p><strong>Combustibles ofertados:</strong> ${e.combustibles.join(", ")}</p>
+              <p><strong>Cantidades de combustible restante:</strong></p>
+              <ul>
+                ${Object.keys(e.cantidad).map(c => `<li>${c}: ${e.cantidad[c]} lts</li>`).join("")}
+              </ul>
+            `
+          });
+
+          infowindow.open(map, marker);
+          actualizarInformacionSurtidor(e);
+        });
+
+        markers.push(marker);
+      });
+    }
+
+    function actualizarInformacionSurtidor(e) {
+      document.getElementById("nombreEstacion").textContent = e.nombre;
+      document.getElementById("combustiblesEstacion").textContent = e.combustibles.join(", ");
+      const cantidadCombustible = document.getElementById("cantidadCombustible");
+      cantidadCombustible.innerHTML = Object.keys(e.cantidad).map(c => `<li>${c}: ${e.cantidad[c]} lts</li>`).join("");
+      document.getElementById("cantidadFila").textContent = "Media";
+    }
+
+    cargarEstaciones();
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8UkQgeuRwCFUJOtac-i-K_RuY3cEjTkU&callback=initMap"></script>
+</body>
+</html>
