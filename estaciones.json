@@ -1,0 +1,1472 @@
+[
+    {
+        "nombre": "CARRASCO S.R.L. COMERCIALIZADORA DE HIDROCARBUROS",
+        "posicion": {},
+        "departamento": "dirección:kilometro 260, carretera cbba- santa cruz entre rios (bulo bulo) - cochabambateléfono:4228588",
+        "direccion": "ANH00026-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3477,
+            "Diésel": 6929
+        }
+    },
+        {
+            "nombre": "CENTRO DE SERVICIO PORTALEZ SRL",
+            "posicion": { "lat": -17.37476839543017, "lng": -66.15700061083768 },        
+            "departamento": "cochabamba",
+            "direccion": "ANH00961-CLES01-LIC07/2024",
+            "combustibles": [
+                "Gasolina especial",
+                "Diésel"
+            ],
+            "cantidad": {
+                "Gasolina especial": 1567,
+                "Diésel": 2001
+            }
+        },
+    {
+        "nombre": "CHIÑATA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:sacaba - carretera nueva santa cruz km 20 nº s/n zona: san gangocheteléfono:4701368",
+        "direccion": "ANH04242-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1157,
+            "Diésel": 7606
+        }
+    },
+    {
+        "nombre": "COMERCIALIZADORA \"QK\" S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. villazòn km 11.1/2 nº s/n  zona - guadalupe.teléfono:4270193",
+        "direccion": "ANH00275-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5338,
+            "Diésel": 2675
+        }
+    },
+    {
+        "nombre": "COMPAÑIA COMERCIAL DE GAS COMPRIMIDO CGC SRL",
+        "posicion": {},
+        "departamento": "dirección:carretera confital km 19 1/2teléfono:4245350",
+        "direccion": "ANH00960-CLES02-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5940,
+            "Diésel": 1067
+        }
+    },
+    {
+        "nombre": "DISEL S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:avenida blanco galindo k.m. 12.5 nº s/n - zona iquircollo - cochabambateléfono:4390302",
+        "direccion": "ANH00679-CLES02-LIC08/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8680,
+            "Diésel": 7401
+        }
+    },
+    {
+        "nombre": "DISEL S.R.L. SUCURSAL 1",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba - oruro km 15 1/2 localidad vintoteléfono:4369106",
+        "direccion": "ANH00679-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9562,
+            "Diésel": 7101
+        }
+    },
+    {
+        "nombre": "EL MANANTIAL CENTRO DE SERVICIOS Y COMERCIO S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. 6 de agosto esq. calle angostura s/nteléfono:4234488",
+        "direccion": "ANH00484-CLES04-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2723,
+            "Diésel": 6340
+        }
+    },
+    {
+        "nombre": "EL MANANTIAL CENTRO DE SERVICIOS Y COMERCIO S.R.L. SUC I",
+        "posicion": {},
+        "departamento": "dirección:av. simon lopez # 1930teléfono:4288015",
+        "direccion": "ANH00484-CLES03-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5515,
+            "Diésel": 1378
+        }
+    },
+    {
+        "nombre": "EL MANANTIAL CENTRO DE SERVICIOS Y COMERCIO S.R.L. SUC II",
+        "posicion": {},
+        "departamento": "dirección:av. gral. galindo esq. juan de la cruz torrez.teléfono:4532994",
+        "direccion": "ANH00484-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1800,
+            "Diésel": 2743
+        }
+    },
+    {
+        "nombre": "EL VIAJERO COMBUSTIBLE Y SERVICIOS S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. albina patiño esq. calle rosas localidad de vintoteléfono:4356174",
+        "direccion": "ANH00552-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1746,
+            "Diésel": 4170
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO ADRIAN",
+        "posicion": {},
+        "departamento": "dirección:av. mons. walter rosales cliza s/n zona cliza-cochabambateléfono:4575030",
+        "direccion": "ANH00850-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9740,
+            "Diésel": 7023
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO AEROPUERTO SRL.",
+        "posicion": {"lat": -17.40772311946628, "lng": -66.1712948256911},
+        "departamento": "cochabamba",
+        "direccion": "ANH00906-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6946,
+            "Diésel": 3511
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO AIQUILE",
+        "posicion": {},
+        "departamento": "dirección:av.: bolivar n° s/n zona : villa guadalupeteléfono:73429635",
+        "direccion": "ANH01674-CLES01-LIC08/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3470,
+            "Diésel": 7709
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO ALEX",
+        "posicion": {},
+        "departamento": "dirección:km 222 carretera cochabamba - santa cruz localidad de ivirgarzama puerto villarroel - cochabambateléfono:71475586",
+        "direccion": "ANH00784-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6792,
+            "Diésel": 8390
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO ANITA",
+        "posicion": {},
+        "departamento": "dirección:av. villazon km. 5 no. 5824 zona. puntiti.  sacaba - cochabamba.teléfono:4722350",
+        "direccion": "ANH00440-CLES01-LIC07/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3945,
+            "Diésel": 5068
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO ARANI",
+        "posicion": {},
+        "departamento": "dirección:av. ingavi s/n zona araniteléfono:4576282",
+        "direccion": "ANH00595-CLES01-LIC09/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2841,
+            "Diésel": 3912
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO ARANJUEZ",
+        "posicion": {},
+        "departamento": "dirección:av. general galindo nº 1472. zona: aranjuez cochabamba - cochabambateléfono:4482069",
+        "direccion": "ANH00984-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8654,
+            "Diésel": 4194
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO ARISPE",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - carretera a santa cruz nº s/n zona: tolatateléfono:4575664",
+        "direccion": "ANH00647-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1094,
+            "Diésel": 6840
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO AYACUCHO",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. ayacucho nº 894 zona central norte cochabamba - cochabambateléfono:4523776",
+        "direccion": "ANH00476-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8279,
+            "Diésel": 6265
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO BEIJING S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:zona villa busch norte, distrito 03, sub distrito 27, calle 23 de marzo avenida circunvalación beijingteléfono:4244283",
+        "direccion": "ANH00362-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1544,
+            "Diésel": 5839
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO CAPITAN VICTOR USTARIZ",
+        "posicion": {},
+        "departamento": "dirección:avenida capitan victor ustariz nro. s/n zona coña coñateléfono:4435312",
+        "direccion": "ANH00363-CLES01-LIC05/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8336,
+            "Diésel": 1424
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO CHIMBOCO",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba - santa cruz km 14,5 sacaba - cochabambateléfono:4708323",
+        "direccion": "ANH01320-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8187,
+            "Diésel": 2515
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO CHIMORE",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba - santa cruz km 190teléfono:4243799",
+        "direccion": "ANH01346-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4366,
+            "Diésel": 9939
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO CHULLPANI",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba – santa cruz zona chullpani grandeteléfono:70724513",
+        "direccion": "ANH03768-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6932,
+            "Diésel": 8459
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO CIRCUITO BOLIVIA S.A.",
+        "posicion": {},
+        "departamento": "dirección:av. 6 de agosto n° s/n zona cerro verdeteléfono:4562266",
+        "direccion": "ANH00583-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3276,
+            "Diésel": 6858
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO CITY TRUCK FH S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. villazón km 10.5  sacaba - cochabamba.teléfono:4703510",
+        "direccion": "ANH00445-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3585,
+            "Diésel": 3610
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO COCHABAMBA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. melchor perez de olguin s/n  zona chimbateléfono:4283166",
+        "direccion": "ANH00437-CLES02-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6561,
+            "Diésel": 3246
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO COCHABAMBA S.R.L. SUCURSAL I",
+        "posicion": {},
+        "departamento": "dirección:calle rigoberto saenz esq. av. beijing.teléfono:4283164",
+        "direccion": "ANH00437-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6331,
+            "Diésel": 7520
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO COCHABAMBA S.R.L. SUCURSAL II",
+        "posicion": {},
+        "departamento": "dirección:av. circunvalacion ii s/n zona condebamba, distrito 2, subdistrito 22 manzana 616teléfono:4283164",
+        "direccion": "ANH00437-CLES03-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7314,
+            "Diésel": 7942
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO COODPE",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - carretera cbba - santa cruz km 43 n° s/n zona paracaya punata - cochabamba.teléfono:4571175",
+        "direccion": "ANH00849-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8771,
+            "Diésel": 5339
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO DAYANA",
+        "posicion": {},
+        "departamento": "dirección:carretera antigua a santa cruz km 20 1/2 n°s/n zona carcajeteléfono:4296819",
+        "direccion": "ANH02461-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2796,
+            "Diésel": 3114
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO DELAASUNCION-AMERICA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. america esquina daniel albornoz nro. s/n zona noroesteteléfono:77430005",
+        "direccion": "ANH08626-CLES01-LIC04/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6136,
+            "Diésel": 4358
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO DORBIGNI",
+        "posicion": {},
+        "departamento": "dirección:av. dorbigni nº 1201 zona villa galindoteléfono:4405499",
+        "direccion": "ANH00306-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5747,
+            "Diésel": 4692
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO EL TRÓPICO SRL",
+        "posicion": {},
+        "departamento": "dirección:av. integración villa tunari km. 159 villa tunari - cochabambateléfono:413593",
+        "direccion": "ANH01080-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3839,
+            "Diésel": 5798
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO EPIZANA",
+        "posicion": {},
+        "departamento": "dirección:calle mercedes anaya s/n zona epizana  totora - cochabambateléfono:4296819",
+        "direccion": "ANH01094-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4179,
+            "Diésel": 4084
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO EQGAS S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:calle tte. lucio canedo s/n - localidad de punatateléfono:76464643",
+        "direccion": "ANH00040-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7586,
+            "Diésel": 5737
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO FATIMA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba-santa cruz km 180 s/nteléfono:77952403",
+        "direccion": "ANH01079-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8516,
+            "Diésel": 7024
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO FOX J.G.J S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba - santa cruz provincia chapare localidad de villa tunari distrito 01 zona s/n manzano 11 lote 01 villa tunari tunari - cochabambateléfono:4474545",
+        "direccion": "ANH02916-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3849,
+            "Diésel": 1434
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO IQUIRCOLLO S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba-av. blanco galindo km 11 1/2 nº s/n zona: iquircolloteléfono:4262793",
+        "direccion": "ANH00873-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8923,
+            "Diésel": 5250
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO IQUIRCOLLO S.R.L. SUCURSAL",
+        "posicion": {},
+        "departamento": "dirección:avenida santa cruz s/n zona tacata, quillacolloteléfono:4351994",
+        "direccion": "ANH00873-CLES02-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7303,
+            "Diésel": 7231
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO ITAPAYA",
+        "posicion": {},
+        "departamento": "dirección:carretera a capinota km 39, zona tajra  sipe sipe -  cochabamba.teléfono:4382181",
+        "direccion": "ANH01245-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9206,
+            "Diésel": 6161
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO LA MERCED S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. coboce   zona: irpa irpateléfono:4389034",
+        "direccion": "ANH00959-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9306,
+            "Diésel": 5401
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO LAS ISLAS",
+        "posicion": {},
+        "departamento": "dirección:avenida blanco galindo km 5 1/2 n° s/n  zona coña coña colcapirhua - cochabambateléfono:4441558",
+        "direccion": "ANH00763-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5115,
+            "Diésel": 6055
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO LAS PALMERAS S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. general campero esq. av. capitán ustarizteléfono:4227179",
+        "direccion": "ANH00822-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1707,
+            "Diésel": 1184
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO LOS ALAMOS",
+        "posicion": {},
+        "departamento": "dirección:avenida blanco galindo  kilometro 3 1/2  s/n zona hipodromo.teléfono:4280142",
+        "direccion": "ANH00150-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9542,
+            "Diésel": 9026
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO \"LOS ALPES\"",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. villazon km 1 carretera a sacaba nº s/n zona: barrio irlandez.teléfono:4227179",
+        "direccion": "ANH02724-CLES01-LIC07/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2162,
+            "Diésel": 5294
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO LOS LIBERTADORES S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:avenida siles s/n localidad de punatateléfono:4577044",
+        "direccion": "ANH00278-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2324,
+            "Diésel": 2269
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO MAX MAMANGUEÑO",
+        "posicion": {},
+        "departamento": "dirección:av. reducto s/n zona cuatro esquinas quillacollo - cochabambateléfono:4373957",
+        "direccion": "ANH02637-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1206,
+            "Diésel": 1644
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO MIZQUE",
+        "posicion": {},
+        "departamento": "dirección:carretera  a mizque aiquile   nº s/n  zona konchupata provincia mizque  esta sobre la carretera.teléfono:4342396",
+        "direccion": "ANH00432-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2932,
+            "Diésel": 4505
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO MONTERREY S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. blanco galindo km 7 loc. de colcapirhuateléfono:4268451",
+        "direccion": "ANH01068-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1158,
+            "Diésel": 5308
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO OMEREQUE",
+        "posicion": {},
+        "departamento": "dirección:carretera sucre-santa cruz nro. s/n zona zona 3teléfono:67507107",
+        "direccion": "ANH09415-CLES01-LIC01/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1210,
+            "Diésel": 7177
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO PANAMERICANA SUCURSAL COCHABAMBA",
+        "posicion": {},
+        "departamento": "dirección:avenida tadeo haenke esq. calle ismael cespedes s/nteléfono:4218423",
+        "direccion": "ANH00928-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1333,
+            "Diésel": 1454
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO PAPU S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:avenida los libertadores n° s/n, zona ladera lote n° 30 manzano dteléfono:76944567",
+        "direccion": "ANH04084-CLES01-LIC07/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6420,
+            "Diésel": 4637
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO PARAJE 24.7 S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. blanco galindo km. 10  n° s/n  zona: piñami sudteléfono:4799346",
+        "direccion": "ANH04600-CLES02-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7205,
+            "Diésel": 2438
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO PARAJE 24.7 S.R.L.- SUCURSAL COCHABAMBA I",
+        "posicion": {},
+        "departamento": "dirección:avenida victor ustariz km.11.5 zona piñamiteléfono:4799346",
+        "direccion": "ANH04600-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4637,
+            "Diésel": 6247
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO PAREDES VALLEJOS",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. monseñor walter rosales km 30 n° s/n zona: villa gracielateléfono:4573683",
+        "direccion": "ANH04882-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9384,
+            "Diésel": 8292
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO PAROTANI S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - carretera confital quillacollo- oruro km. 37 s/n zona parotaniteléfono:4383563",
+        "direccion": "ANH00331-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7595,
+            "Diésel": 2854
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO \"POJO\"",
+        "posicion": {},
+        "departamento": "dirección:pojo - sindicato agrario villa florida parsela 089 n° s/n uv: s/n mzno: s/n zona: pojoteléfono:72262434",
+        "direccion": "ANH05614-CLES01-LIC05/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7493,
+            "Diésel": 7129
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO PUNATA",
+        "posicion": {},
+        "departamento": "dirección:av. siles no.10 punata punata - cochabambateléfono:4577033",
+        "direccion": "ANH00545-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7674,
+            "Diésel": 9854
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO REFINERIA",
+        "posicion": {},
+        "departamento": "dirección:zona valle hermoso distrito n° 8 sub distrito n° 20 manzana 173 avenida siglo xx n° 500 - cochabambateléfono:4295316",
+        "direccion": "ANH00824-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4222,
+            "Diésel": 2627
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO RG YOSITA",
+        "posicion": {},
+        "departamento": "dirección:av. fuerza aerea esq. av. del cabildo nro. 2433 zona zud jayhuaycoteléfono:61844446",
+        "direccion": "ANH08632-CLES01-LIC05/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4037,
+            "Diésel": 1345
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO RIOJA",
+        "posicion": {},
+        "departamento": "dirección:av. petrolera km 4.5 n° s/n  zona valle hermosoteléfono:4237344",
+        "direccion": "ANH00228-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9630,
+            "Diésel": 4481
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO SAN JORGE CBBA. S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:avenida blanco galindo km. 14 1/2 barrio manacoteléfono:4262176",
+        "direccion": "ANH01675-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5560,
+            "Diésel": 2268
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO SAN JUAN BAUTISTA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:avenida guayacan nº s/n  zona: villa eucaliptos norteteléfono:70712260",
+        "direccion": "ANH03767-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1621,
+            "Diésel": 4624
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO SAN MATEO S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - carretera cbba-santa cruz km. 160 nº s/n zona: villa tunariteléfono:0",
+        "direccion": "ANH02754-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4683,
+            "Diésel": 6666
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO SANTA MONICA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. melchor perez de olguin n° 2279 esq. wiracocha zona: sarcoteléfono:4409566",
+        "direccion": "ANH01205-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3778,
+            "Diésel": 4951
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO SEÑOR SANTIAGO",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. siglo xx nº 326  zona sudteléfono:4218871",
+        "direccion": "ANH00821-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5481,
+            "Diésel": 1283
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO SEÑOR SANTIAGO SUCURSAL 1",
+        "posicion": {},
+        "departamento": "dirección:av. melchor perez de olguin esq. jesus larateléfono:4477458",
+        "direccion": "ANH00821-CLES02-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3654,
+            "Diésel": 3379
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO SUTICOLLO",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - km 26 carretera confital nº s/n zona: suticolloteléfono:4384147",
+        "direccion": "ANH01688-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7840,
+            "Diésel": 2757
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO TICTI S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. petrolera km. 2 nº s/n mzno: 005 zona: tictiteléfono:4732818",
+        "direccion": "ANH05270-CLES01-LIC08/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3246,
+            "Diésel": 3600
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO TIRAQUE",
+        "posicion": {},
+        "departamento": "dirección:cochabamba av santa cruz nº s/n zona tiraqueteléfono:4570110",
+        "direccion": "ANH00840-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2072,
+            "Diésel": 6788
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO TRANS NACIONAL ETERAZAMA S.A.",
+        "posicion": {},
+        "departamento": "dirección:carretera villa tunari - eterazama km 28teléfono:68516006",
+        "direccion": "ANH03591-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5584,
+            "Diésel": 7462
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO TRANS SACABA S.A.",
+        "posicion": {},
+        "departamento": "dirección:calle ayacucho nº700 zona miraflores sacaba - cochabambateléfono:4701149",
+        "direccion": "ANH00603-CLES02-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7148,
+            "Diésel": 7314
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO TRANS SACABA S.A.II",
+        "posicion": {},
+        "departamento": "dirección:carretera nueva a santa cruz km.18 1/2teléfono:4582434",
+        "direccion": "ANH00603-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4624,
+            "Diésel": 4694
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO TRANS TRICOLOR NACIONAL S.A.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba carretera a trinidad km 51 n° s/n zona: eterazamateléfono:4024032",
+        "direccion": "ANH01084-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2483,
+            "Diésel": 6800
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO TRUJILLO ORELLANA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:avenida  panamericana nº s/n  zona central chimoreteléfono:68580044",
+        "direccion": "ANH00956-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6879,
+            "Diésel": 5332
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO URKUPIÑA",
+        "posicion": {},
+        "departamento": "dirección:cochabamba av. blanco galindo km. 6 1/2 (colcapirhua)teléfono:4269601",
+        "direccion": "ANH00230-CLES02-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 5565,
+            "Diésel": 9577
+        }
+    },
+    {
+        "nombre": "ESTACIÓN DE SERVICIO URKUPIÑA I",
+        "posicion": {},
+        "departamento": "dirección:av. circunvalación esquina francisco bedregal s/nteléfono:4458723",
+        "direccion": "ANH00230-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3371,
+            "Diésel": 5038
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO VIRGEN DE LAS ANGUSTIAS S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:camino a tiraque nro. 00 zona sudteléfono:76962834",
+        "direccion": "ANH09116-CLES01-LIC01/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3751,
+            "Diésel": 8159
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO 20 DE DICIEMBRE",
+        "posicion": {},
+        "departamento": "dirección:calle 20 de diciembre s/n zona iquircolloteléfono:4545869",
+        "direccion": "ANH03187-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6803,
+            "Diésel": 5613
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIO 24 DE SEPTIEMBRE S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. coboce -el tambo-camino irpa irpa nº s/n zona: el tamboteléfono:4523776",
+        "direccion": "ANH02194-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2867,
+            "Diésel": 5924
+        }
+    },
+    {
+        "nombre": "ESTACION DE SERVICIOS SIPE SIPE S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:zona montenegro,carretera cochabamba oruroteléfono:4385343",
+        "direccion": "ANH01676-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2848,
+            "Diésel": 6852
+        }
+    },
+    {
+        "nombre": "ESTAGAS SOCIEDAD DE RESPONSABILIDAD LIMITADA ESTAGAS S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. petrolera nro. 2827 zona el arcoteléfono:4746929",
+        "direccion": "ANH00929-CLES01-LIC04/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 3805,
+            "Diésel": 4172
+        }
+    },
+    {
+        "nombre": "FORTALEZA ENERGY S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:tiquipaya - calle cochabamba n° 742  zona: centralteléfono:4316337",
+        "direccion": "ANH03082-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2565,
+            "Diésel": 5831
+        }
+    },
+    {
+        "nombre": "GASNOR SERVICIOS PETROLEROS S.R.L. GASNOR S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:cochabamba -av. panamerica nº s/n zona:sudteléfono:4735792",
+        "direccion": "ANH02271-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1365,
+            "Diésel": 9164
+        }
+    },
+    {
+        "nombre": "GUADELOUPE GROUP S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:sacaba- av. circunvalación n° s/n uv.  s/n mzo. 8 zona mesadillateléfono:72201998",
+        "direccion": "ANH08100-CLES01-LIC05/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9692,
+            "Diésel": 5984
+        }
+    },
+    {
+        "nombre": "IMBRANJO S.R.L",
+        "posicion": {},
+        "departamento": "dirección:blanco galindo km 5.5, esquina av. sexta nro. s/n zona coña coñateléfono:61676655",
+        "direccion": "ANH11757-CLES01-LIC01/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2654,
+            "Diésel": 9517
+        }
+    },
+    {
+        "nombre": "INVERSIONES VALLE SUR S.A.",
+        "posicion": {},
+        "departamento": "dirección:av. leonidas rojas n° s/n esquina av. jaime angulo localidad de taratateléfono:4112462",
+        "direccion": "ANH00361-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 4247,
+            "Diésel": 5910
+        }
+    },
+    {
+        "nombre": "INVERSIONES Y SERVICIOS TRUJILLO ORELLANA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. panamericana l.c lauca nro. s/n zona lauca eñeteléfono:68580077",
+        "direccion": "ANH08092-CLES01-LIC05/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8574,
+            "Diésel": 6803
+        }
+    },
+    {
+        "nombre": "ISABEL CHAVEZ",
+        "posicion": {},
+        "departamento": "dirección:av. petrolera km 9 s/n zona: uspa uspa arbieto- cochabambateléfono:4531784",
+        "direccion": "ANH00964-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8382,
+            "Diésel": 9605
+        }
+    },
+    {
+        "nombre": "KHORA ESTACION DE SERVICIO",
+        "posicion": {},
+        "departamento": "dirección:av. khora y calle enrique fiebik no. s/n zona: tiquipayateléfono:4316293",
+        "direccion": "ANH00178-CLES01-LIC10/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2211,
+            "Diésel": 8172
+        }
+    },
+    {
+        "nombre": "LA PATRIA S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:chapisirca nro. sn zona chilimarcateléfono:4732792",
+        "direccion": "ANH10773-CLES01-LIC04/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6151,
+            "Diésel": 1888
+        }
+    },
+    {
+        "nombre": "LOS LAURELES",
+        "posicion": {},
+        "departamento": "dirección:av. dorbigny nro. s/n zona villa busch norteteléfono:70766868",
+        "direccion": "ANH00892-CLES01-LIC04/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7847,
+            "Diésel": 2791
+        }
+    },
+    {
+        "nombre": "PETROCEL S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. ernesto cespedes nro. sin número zona centralteléfono:4018125",
+        "direccion": "ANH10081-CLES01-LIC03/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8908,
+            "Diésel": 2788
+        }
+    },
+    {
+        "nombre": "PETROGAS SERVICIOS PETROLEROS S.R.L.",
+        "posicion": {},
+        "departamento": "dirección:av. ingavi esquina daniel campos nº s/n zona: chimbateléfono:4297680",
+        "direccion": "ANH00898-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 7879,
+            "Diésel": 6120
+        }
+    },
+    {
+        "nombre": "SILVIA ELIZABETH CESPEDES AGUILAR",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - carretera a santa cruz km 220 nº s/n zona: ivirgarzamateléfono:4243799",
+        "direccion": "ANH02161-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2307,
+            "Diésel": 1312
+        }
+    },
+    {
+        "nombre": "SUCURSAL COCHABAMBA",
+        "posicion": {},
+        "departamento": "dirección:av. panamericana, de la localidad de bulo bulo, del distrito municipal de entre riosteléfono:71707957",
+        "direccion": "ANH00784-CLES02-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2812,
+            "Diésel": 6391
+        }
+    },
+    {
+        "nombre": "SURTIDOR CAMPERO",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba - sucre kilómetro 215. localidad aiquile.teléfono:4343068",
+        "direccion": "ANH00968-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 6442,
+            "Diésel": 2604
+        }
+    },
+    {
+        "nombre": "SURTIDOR DE GASOLINA Y DIESEL COLOMI",
+        "posicion": {},
+        "departamento": "dirección:carretera cochabamba - santa cruz km 45teléfono:4723556",
+        "direccion": "ANH01259-CLES01-LIC09/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1866,
+            "Diésel": 3608
+        }
+    },
+    {
+        "nombre": "SURTIDOR EL CRISTO",
+        "posicion": {},
+        "departamento": "dirección:avenida juan de la rosa nº 121teléfono:4242552",
+        "direccion": "ANH01573-CLES01-LIC08/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 8302,
+            "Diésel": 7272
+        }
+    },
+    {
+        "nombre": "SURTIDOR NISSAN",
+        "posicion": {},
+        "departamento": "dirección:cochabamba - av. petrolera km 1 nº s/n zona: sudteléfono:4732792",
+        "direccion": "ANH00159-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 1574,
+            "Diésel": 2127
+        }
+    },
+    {
+        "nombre": "SURTIDOR VILLA OBRAJES",
+        "posicion": {},
+        "departamento": "dirección:av. barrientos km 17 1/2 zona: villa obrajes s/nteléfono:4700346",
+        "direccion": "ANH01188-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9027,
+            "Diésel": 9771
+        }
+    },
+    {
+        "nombre": "TERMINAL DE BUSES COCHABAMBA S.A.",
+        "posicion": {},
+        "departamento": "dirección:av. ayacucho n° s/n  zona: sudteléfono:4234600",
+        "direccion": "ANH01196-CLES01-LIC07/2024",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 2138,
+            "Diésel": 3883
+        }
+    },
+    {
+        "nombre": "VENICIA ALANEZ JIMENES",
+        "posicion": {},
+        "departamento": "dirección:av. ecologica s/n zona trojesteléfono:4313039",
+        "direccion": "ANH00963-CLES01-LIC08/2025",
+        "combustibles": [
+            "Gasolina especial",
+            "Diésel"
+        ],
+        "cantidad": {
+            "Gasolina especial": 9319,
+            "Diésel": 4488
+        }
+    }
+]
