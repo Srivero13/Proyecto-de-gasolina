@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Estaciones de Servicio</title>
   <style>
     body {
@@ -12,13 +12,11 @@
       padding: 0;
       color: #333;
     }
-
     h1, h2 {
       font-family: 'Roboto', sans-serif;
       color: #4CAF50;
       font-weight: bold;
     }
-
     header {
       display: flex;
       align-items: center;
@@ -26,7 +24,6 @@
       background-color: #ffffff;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-
     .logo-placeholder {
       width: 50px;
       height: 50px;
@@ -34,25 +31,21 @@
       border-radius: 50%;
       margin-right: 1rem;
     }
-
     header h1 {
       font-size: 1.6rem;
     }
-
     main {
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 1rem;
       padding: 2rem;
     }
-
     .controls {
       display: flex;
       justify-content: space-between;
       width: 100%;
       margin-top: 1rem;
     }
-
     select {
       padding: 0.8rem;
       font-size: 1rem;
@@ -61,75 +54,162 @@
       width: 48%;
       transition: background-color 0.3s ease;
     }
-
     select:hover {
       background-color: #f0f8f5;
     }
-
     #map {
       border-radius: 10px;
       overflow: hidden;
       height: 500px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
-
     .info-panel {
       padding: 1.5rem;
       background-color: #ffffff;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      height: 500px;
-      overflow-y: auto;
     }
-
     .card {
       background-color: #ffffff;
       padding: 1.5rem;
       border: 1px solid #ddd;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      margin-bottom: 1rem;
     }
-
     .card h2 {
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
       color: #333;
     }
-
     .card p {
       font-size: 1rem;
       line-height: 1.6;
     }
-
     .card ul {
       padding-left: 20px;
     }
-
     .card ul li {
       margin-bottom: 0.5rem;
     }
-
     .card span {
       font-weight: bold;
     }
-
-    @media (max-width: 768px) {
-      main {
-        grid-template-columns: 1fr;
-      }
-
-      .controls {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      select {
-        width: 100%;
-        margin-bottom: 1rem;
-      }
+    .cercanas {
+      margin-top: 2rem;
     }
-
+    .cercanas h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #4CAF50;
+    }
+    #rutaButton {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    #rutaButton:hover {
+      background-color: #45a049;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .estadisticas {
+      background-color: #f0f8f5;
+      padding: 2rem;
+      text-align: center;
+    }
+    .estadisticas div {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .estadisticas div div {
+      text-align: center;
+    }
+    .contacto {
+      background-color: #f4f6f9;
+      padding: 2rem;
+    }
+    .contacto form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contacto input, .contacto textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 100%;
+    }
+    .contacto button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .notificaciones {
+      background-color: #ffcc00;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    #infoButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    /* New styles for added functionality */
+    .search-container {
+      margin-bottom: 1rem;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    #favoriteButton {
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+    #locateMe {
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -139,6 +219,10 @@
   </header>
   <main>
     <div>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar estación...">
+      </div>
+      <button id="locateMe">📍 Usar mi ubicación</button>
       <div id="map"></div>
       <div class="controls">
         <select id="departamentoSelect" onchange="cambiarDepartamento()">
@@ -152,7 +236,6 @@
           <option value="beni">Beni</option>
           <option value="pando">Pando</option>
         </select>
-
         <select id="filtroDisponibilidad" onchange="filtrarDisponibilidad()">
           <option value="todos">Todos los surtidores</option>
           <option value="disponibles">Con disponibilidad</option>
@@ -160,28 +243,79 @@
         </select>
       </div>
     </div>
-
     <div class="info-panel">
       <div class="card" id="infoSurtidor">
         <h2>Información de surtidor seleccionado:</h2>
         <p><strong>Estación de servicio:</strong> <span id="nombreEstacion">--</span></p>
+        <p><strong>Dirección:</strong> <span id="direccionEstacion">--</span></p>
         <p><strong>Combustibles ofertados:</strong> <span id="combustiblesEstacion">--</span></p>
         <p><strong>Cantidades de combustible restante:</strong></p>
         <ul id="cantidadCombustible">
-          <li><span id="combustible1">--</span></li>
-          <li><span id="combustible2">--</span></li>
+          <li>--</li>
         </ul>
-        <p><strong>Cantidad de fila:</strong> <span id="cantidadFila">--</span></p>
+        <button id="favoriteButton">⭐ Añadir a favoritos</button>
+        <div class="cercanas" id="surtidoresCercanos">
+          <h3>Estaciones cercanas con disponibilidad:</h3>
+          <ul id="listaCercanas">
+            <li>--</li>
+          </ul>
+        </div>
+        <button id="rutaButton" style="display:none;" onclick="trazarRuta()">Trazar ruta a estación cercana</button>
       </div>
     </div>
   </main>
-
+  <footer>
+    <p>&copy; 2025 Todos los derechos reservados.</p>
+    <p>
+      Síguenos en:
+      <a href="https://facebook.com">Facebook</a>
+      <a href="https://discord.gg/bBe34uCZ">Discord</a>
+      <a href="https://instagram.com">Instagram</a>
+    </p>
+  </footer>
+  
+  <div class="estadisticas">
+    <h2>Estadísticas del Sistema</h2>
+    <div>
+      <div>
+        <h3>Total de Estaciones</h3>
+        <p id="totalEstaciones">--</p>
+      </div>
+      <div>
+        <h3>Estaciones con Combustible</h3>
+        <p id="estacionesConCombustible">--</p>
+      </div>
+      <div>
+        <h3>Estaciones Cercanas</h3>
+        <p id="estacionesCercanas">--</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="contacto">
+    <h2>¡Déjanos tu Opinión!</h2>
+    <form>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      <textarea id="comentario" name="comentario" placeholder="Tu comentario" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <div class="notificaciones">
+    <h3>¡Atención!</h3>
+    <p>La información de algunas estaciones podría no estar actualizada debido a problemas con la base de datos.</p>
+  </div>
+  <button id="infoButton" onclick="mostrarInfo()">ℹ️</button>
   <script>
+    function mostrarInfo() {
+      alert('Más información de la estación o funcionalidades adicionales.');
+    }
+
     let map;
     let markers = [];
     let estaciones = [];
     let infowindow;
-
+    let directionsRenderer;
+    let currentSurtidor;
     const ubicaciones = {
       cochabamba: { lat: -17.3933887, lng: -66.1577207 },
       lapaz: { lat: -16.5, lng: -68.119 },
@@ -195,9 +329,14 @@
     };
 
     async function cargarEstaciones() {
-      const response = await fetch('estaciones.json');
-      estaciones = await response.json();
-      initMap();
+      try {
+        const response = await fetch('estaciones.json');
+        estaciones = await response.json();
+        initMap();
+      } catch (error) {
+        console.error('Error loading stations:', error);
+        alert('Error al cargar las estaciones. Por favor recarga la página.');
+      }
     }
 
     function initMap() {
@@ -206,13 +345,96 @@
         center: ubicaciones["cochabamba"]
       });
 
+      map.addListener('dblclick', function() {
+        if (directionsRenderer) {
+          directionsRenderer.setMap(null);
+          directionsRenderer = null;
+        }
+      });
+
       map.addListener('click', function() {
         if (infowindow) {
           infowindow.close();
         }
       });
 
+      setupSearch();
+      setupFavorites();
+      setupLocationButton();
       cargarEstacionesPorDepartamento("cochabamba");
+    }
+
+    function setupSearch() {
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        markers.forEach(marker => {
+          const shouldShow = marker.getTitle().toLowerCase().includes(searchTerm);
+          marker.setVisible(shouldShow);
+        });
+      });
+    }
+
+    function setupFavorites() {
+      const favoriteButton = document.getElementById('favoriteButton');
+      favoriteButton.addEventListener('click', () => {
+        if (!currentSurtidor) return;
+        
+        let favorites = JSON.parse(localStorage.getItem('favoriteStations')) || [];
+        const isFavorite = favorites.some(f => f.nombre === currentSurtidor.nombre);
+        
+        if (isFavorite) {
+          favorites = favorites.filter(f => f.nombre !== currentSurtidor.nombre);
+          favoriteButton.textContent = '⭐ Añadir a favoritos';
+          favoriteButton.style.backgroundColor = '#ffcc00';
+        } else {
+          favorites.push({
+            nombre: currentSurtidor.nombre,
+            posicion: currentSurtidor.posicion,
+            departamento: currentSurtidor.departamento
+          });
+          favoriteButton.textContent = '★ Quitar de favoritos';
+          favoriteButton.style.backgroundColor = '#4CAF50';
+        }
+        
+        localStorage.setItem('favoriteStations', JSON.stringify(favorites));
+      });
+    }
+
+    function setupLocationButton() {
+      document.getElementById('locateMe').addEventListener('click', () => {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+              
+              map.setCenter(userLocation);
+              
+              new google.maps.Marker({
+                position: userLocation,
+                map: map,
+                title: "Mi ubicación",
+                icon: {
+                  path: google.maps.SymbolPath.CIRCLE,
+                  scale: 8,
+                  fillColor: "#4285F4",
+                  fillOpacity: 1,
+                  strokeWeight: 2,
+                  strokeColor: "white"
+                }
+              });
+            },
+            (error) => {
+              alert("No se pudo obtener tu ubicación: " + error.message);
+            }
+          );
+        } else {
+          alert("Tu navegador no soporta geolocalización");
+        }
+      });
     }
 
     function cambiarDepartamento() {
@@ -234,25 +456,23 @@
           if (infowindow) {
             infowindow.close();
           }
-          
           infowindow = new google.maps.InfoWindow({
             content: `
               <h3>${e.nombre}</h3>
-              <p><strong>Departamento:</strong> ${e.departamento}</p>
+              <p><strong>Dirección:</strong> ${e.direccion || 'No disponible'}</p>
               <p><strong>Combustibles ofertados:</strong> ${e.combustibles.join(", ")}</p>
-              <p><strong>Cantidades de combustible restante:</strong></p>
+              <p><strong>Cantidades disponibles:</strong></p>
               <ul>
-                ${Object.keys(e.cantidad).map(c => `<li>${c}: ${e.cantidad[c]} lts</li>`).join("")}
+                ${Object.entries(e.cantidad).map(([fuel, amount]) => `<li>${fuel}: ${amount} lts</li>`).join("")}
               </ul>
             `
           });
-
           infowindow.open(map, marker);
           actualizarInformacionSurtidor(e);
         });
-
         markers.push(marker);
       });
+      actualizarEstadisticas();
     }
 
     function limpiarMarcadores() {
@@ -260,60 +480,129 @@
       markers = [];
     }
 
+    function actualizarInformacionSurtidor(e) {
+      currentSurtidor = e;
+      document.getElementById("nombreEstacion").textContent = e.nombre;
+      document.getElementById("direccionEstacion").textContent = e.direccion || 'No disponible';
+      document.getElementById("combustiblesEstacion").textContent = e.combustibles.join(", ");
+      
+      const cantidadCombustible = document.getElementById("cantidadCombustible");
+      cantidadCombustible.innerHTML = Object.entries(e.cantidad)
+        .map(([fuel, amount]) => `<li>${fuel}: ${amount} lts</li>`)
+        .join("");
+      const favorites = JSON.parse(localStorage.getItem('favoriteStations')) || [];
+      const isFavorite = favorites.some(f => f.nombre === e.nombre);
+      const favoriteButton = document.getElementById('favoriteButton');
+      favoriteButton.textContent = isFavorite ? '★ Quitar de favoritos' : '⭐ Añadir a favoritos';
+      favoriteButton.style.backgroundColor = isFavorite ? '#4CAF50' : '#ffcc00';
+    
+      const cercanas = estaciones
+        .filter(est => est !== e && est.departamento === e.departamento)
+        .filter(est =>
+          Object.values(est.cantidad).some(cant => cant > 0) &&
+          calcularDistancia(e.posicion, est.posicion) <= 5
+        );
+      
+      const listaCercanas = document.getElementById("listaCercanas");
+      if (cercanas.length === 0) {
+        listaCercanas.innerHTML = `<li>No hay estaciones cercanas con disponibilidad.</li>`;
+        document.getElementById("rutaButton").style.display = 'none';
+      } else {
+        listaCercanas.innerHTML = cercanas.map(est => `
+          <li><strong>${est.nombre}</strong> – Combustibles: ${est.combustibles.join(", ")}</li>
+        `).join("");
+        document.getElementById("rutaButton").style.display = 'block';
+        window.cercanaParaRuta = cercanas[0];
+      }
+    }
+
+    function actualizarEstadisticas() {
+      const dpto = document.getElementById("departamentoSelect").value;
+      const estacionesDpto = estaciones.filter(e => e.departamento === dpto);
+      
+      const total = estacionesDpto.length;
+      const conCombustible = estacionesDpto.filter(e => Object.values(e.cantidad).some(c => c > 0)).length;
+      
+      document.getElementById("totalEstaciones").textContent = total;
+      document.getElementById("estacionesConCombustible").textContent = conCombustible;
+      document.getElementById("estacionesCercanas").textContent = "N/A";
+    }
+
     function filtrarDisponibilidad() {
       const filtro = document.getElementById("filtroDisponibilidad").value;
-      const estacionesFiltradas = estaciones.filter(e => {
-        if (filtro === "todos") return true;
-        if (filtro === "disponibles" && Object.values(e.cantidad).some(cantidad => cantidad > 0)) {
-          return true;
-        }
-        if (filtro === "sin_disponibilidad" && Object.values(e.cantidad).every(cantidad => cantidad === 0)) {
-          return true;
-        }
-        return false;
-      });
+      const dpto = document.getElementById("departamentoSelect").value;
       limpiarMarcadores();
-      estacionesFiltradas.forEach(e => {
+      
+      let filtradas = estaciones.filter(e => e.departamento === dpto);
+      
+      if (filtro === "disponibles") {
+        filtradas = filtradas.filter(e => Object.values(e.cantidad).some(c => c > 0));
+      } else if (filtro === "sin_disponibilidad") {
+        filtradas = filtradas.filter(e => Object.values(e.cantidad).every(c => c === 0));
+      }
+      
+      filtradas.forEach(e => {
         const marker = new google.maps.Marker({
           position: e.posicion,
           map: map,
           title: e.nombre
         });
-
+        
         marker.addListener("click", () => {
-          if (infowindow) {
-            infowindow.close();
-          }
+          if (infowindow) infowindow.close();
           infowindow = new google.maps.InfoWindow({
             content: `
               <h3>${e.nombre}</h3>
-              <p><strong>Departamento:</strong> ${e.departamento}</p>
+              <p><strong>Dirección:</strong> ${e.direccion || 'No disponible'}</p>
               <p><strong>Combustibles ofertados:</strong> ${e.combustibles.join(", ")}</p>
-              <p><strong>Cantidades de combustible restante:</strong></p>
-              <ul>
-                ${Object.keys(e.cantidad).map(c => `<li>${c}: ${e.cantidad[c]} lts</li>`).join("")}
-              </ul>
+              <ul>${Object.entries(e.cantidad).map(([fuel, amount]) => `<li>${fuel}: ${amount} lts</li>`).join("")}</ul>
             `
           });
-
           infowindow.open(map, marker);
           actualizarInformacionSurtidor(e);
         });
-
         markers.push(marker);
       });
+      
+      actualizarEstadisticas();
     }
 
-    function actualizarInformacionSurtidor(e) {
-      document.getElementById("nombreEstacion").textContent = e.nombre;
-      document.getElementById("combustiblesEstacion").textContent = e.combustibles.join(", ");
-      const cantidadCombustible = document.getElementById("cantidadCombustible");
-      cantidadCombustible.innerHTML = Object.keys(e.cantidad).map(c => `<li>${c}: ${e.cantidad[c]} lts</li>`).join("");
-      document.getElementById("cantidadFila").textContent = "Media";
+    function calcularDistancia(pos1, pos2) {
+      const R = 6371;
+      const dLat = (pos2.lat - pos1.lat) * Math.PI / 180;
+      const dLng = (pos2.lng - pos1.lng) * Math.PI / 180;
+      const lat1 = pos1.lat * Math.PI / 180;
+      const lat2 = pos2.lat * Math.PI / 180;
+      const a = Math.sin(dLat / 2) ** 2 +
+                Math.sin(dLng / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c;
+    }
+
+    function trazarRuta() {
+      if (window.cercanaParaRuta) {
+        const directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+        directionsRenderer.setMap(map);
+        
+        const request = {
+          origin: currentSurtidor.posicion,
+          destination: window.cercanaParaRuta.posicion,
+          travelMode: google.maps.TravelMode.DRIVING
+        };
+        
+        directionsService.route(request, (result, status) => {
+          if (status === google.maps.DirectionsStatus.OK) {
+            directionsRenderer.setDirections(result);
+          } else {
+            alert("No se pudo trazar la ruta.");
+          }
+        });
+      }
     }
 
     cargarEstaciones();
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=KEY&callback=initMap" async defer></script>
 </body>
 </html>
