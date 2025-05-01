@@ -228,8 +228,8 @@
   {
     "nombre": "ESTACION DE SERVICIO ARANJUEZ",
     "posicion": {
-      "lat": -17.36948353790507,
-      "lng": -66.14112380184451
+      "lat": -17.370003645886307,
+      "lng": -66.1426667653407
     },
     "departamento": "cochabamba",
     "direccion": "ANH00984-CLES01-LIC07/2024",
@@ -451,6 +451,7 @@
       "lng": -66.16926306451374
     },
     "departamento": "cochabamba",
+    "direccion": "ANH00961-CLES01-LIC07/2024",
     "combustibles": [
       "Gasolina especial",
       "Diésel"
