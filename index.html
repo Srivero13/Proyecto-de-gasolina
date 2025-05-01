@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -271,6 +272,7 @@
       <a href="https://facebook.com">Facebook</a>
       <a href="https://discord.gg/bBe34uCZ">Discord</a>
       <a href="https://instagram.com">Instagram</a>
+      <a href="admin.html" style="font-weight:bold;">Panel de Administración</a>
     </p>
   </footer>
   
@@ -329,15 +331,17 @@
     };
 
     async function cargarEstaciones() {
-      try {
-        const response = await fetch('estaciones.json');
-        estaciones = await response.json();
-        initMap();
-      } catch (error) {
-        console.error('Error loading stations:', error);
-        alert('Error al cargar las estaciones. Por favor recarga la página.');
-      }
-    }
+  try {
+    const response = await fetch('/estaciones');
+    if (!response.ok) throw new Error('Error al cargar estaciones');
+    estaciones = await response.json();
+    console.log('Estaciones cargadas:', estaciones);
+    initMap();
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error al cargar las estaciones: ' + error.message);
+  }
+}
 
     function initMap() {
       map = new google.maps.Map(document.getElementById("map"), {
@@ -445,35 +449,36 @@
     }
 
     function cargarEstacionesPorDepartamento(departamento) {
-      estaciones.filter(e => e.departamento === departamento).forEach(e => {
-        const marker = new google.maps.Marker({
-          position: e.posicion,
-          map: map,
-          title: e.nombre
-        });
+  const estacionesFiltradas = estaciones.filter(e => e.departamento === departamento);
+  console.log(`Estaciones en ${departamento}:`, estacionesFiltradas);
 
-        marker.addListener("click", () => {
-          if (infowindow) {
-            infowindow.close();
-          }
-          infowindow = new google.maps.InfoWindow({
-            content: `
-              <h3>${e.nombre}</h3>
-              <p><strong>Dirección:</strong> ${e.direccion || 'No disponible'}</p>
-              <p><strong>Combustibles ofertados:</strong> ${e.combustibles.join(", ")}</p>
-              <p><strong>Cantidades disponibles:</strong></p>
-              <ul>
-                ${Object.entries(e.cantidad).map(([fuel, amount]) => `<li>${fuel}: ${amount} lts</li>`).join("")}
-              </ul>
-            `
-          });
-          infowindow.open(map, marker);
-          actualizarInformacionSurtidor(e);
-        });
-        markers.push(marker);
+  estacionesFiltradas.forEach(e => {
+    console.log('Agregando marcador:', e.nombre, e.posicion);
+    
+    const marker = new google.maps.Marker({
+      position: e.posicion,
+      map: map,
+      title: e.nombre
+    });
+
+    marker.addListener("click", () => {
+      if (infowindow) infowindow.close();
+      
+      infowindow = new google.maps.InfoWindow({
+        content: `
+          <h3>${e.nombre}</h3>
+          <p><strong>Dirección:</strong> ${e.direccion || 'No disponible'}</p>
+          <p><strong>Combustibles:</strong> ${e.combustibles.join(", ")}</p>
+        `
       });
-      actualizarEstadisticas();
-    }
+      
+      infowindow.open(map, marker);
+      actualizarInformacionSurtidor(e);
+    });
+    
+    markers.push(marker);
+  });
+}
 
     function limpiarMarcadores() {
       markers.forEach(m => m.setMap(null));
@@ -481,41 +486,46 @@
     }
 
     function actualizarInformacionSurtidor(e) {
-      currentSurtidor = e;
-      document.getElementById("nombreEstacion").textContent = e.nombre;
-      document.getElementById("direccionEstacion").textContent = e.direccion || 'No disponible';
-      document.getElementById("combustiblesEstacion").textContent = e.combustibles.join(", ");
-      
-      const cantidadCombustible = document.getElementById("cantidadCombustible");
-      cantidadCombustible.innerHTML = Object.entries(e.cantidad)
-        .map(([fuel, amount]) => `<li>${fuel}: ${amount} lts</li>`)
-        .join("");
-      const favorites = JSON.parse(localStorage.getItem('favoriteStations')) || [];
-      const isFavorite = favorites.some(f => f.nombre === e.nombre);
-      const favoriteButton = document.getElementById('favoriteButton');
-      favoriteButton.textContent = isFavorite ? '★ Quitar de favoritos' : '⭐ Añadir a favoritos';
-      favoriteButton.style.backgroundColor = isFavorite ? '#4CAF50' : '#ffcc00';
-    
-      const cercanas = estaciones
-        .filter(est => est !== e && est.departamento === e.departamento)
-        .filter(est =>
-          Object.values(est.cantidad).some(cant => cant > 0) &&
-          calcularDistancia(e.posicion, est.posicion) <= 5
-        );
-      
-      const listaCercanas = document.getElementById("listaCercanas");
-      if (cercanas.length === 0) {
-        listaCercanas.innerHTML = `<li>No hay estaciones cercanas con disponibilidad.</li>`;
-        document.getElementById("rutaButton").style.display = 'none';
-      } else {
-        listaCercanas.innerHTML = cercanas.map(est => `
-          <li><strong>${est.nombre}</strong> – Combustibles: ${est.combustibles.join(", ")}</li>
-        `).join("");
-        document.getElementById("rutaButton").style.display = 'block';
-        window.cercanaParaRuta = cercanas[0];
-      }
-    }
+  currentSurtidor = e;
+  document.getElementById("nombreEstacion").textContent = e.nombre;
+  document.getElementById("direccionEstacion").textContent = e.direccion || 'No disponible';
+  document.getElementById("combustiblesEstacion").textContent = e.combustibles.join(", ");
+  
+  const cantidadCombustible = document.getElementById("cantidadCombustible");
+  cantidadCombustible.innerHTML = Object.entries(e.cantidad)
+    .map(([fuel, amount]) => `<li>${fuel}: ${amount} lts</li>`)
+    .join("");
+  const favorites = JSON.parse(localStorage.getItem('favoriteStations')) || [];
+  const isFavorite = favorites.some(f => f.nombre === e.nombre);
+  const favoriteButton = document.getElementById('favoriteButton');
+  favoriteButton.textContent = isFavorite ? '★ Quitar de favoritos' : '⭐ Añadir a favoritos';
+  favoriteButton.style.backgroundColor = isFavorite ? '#4CAF50' : '#ffcc00';
+  const cercanas = estaciones
+    .filter(est => est !== e && est.departamento === e.departamento)
+    .filter(est => Object.values(est.cantidad).some(cant => cant > 0))
+    .map(est => {
+      return {
+        ...est,
+        distancia: calcularDistancia(e.posicion, est.posicion)
+      };
+    })
+    .filter(est => est.distancia <= 5)
+    .sort((a, b) => a.distancia - b.distancia);
+  
+  const listaCercanas = document.getElementById("listaCercanas");
+  if (cercanas.length === 0) {
+    listaCercanas.innerHTML = `<li>No hay estaciones cercanas con disponibilidad.</li>`;
+    document.getElementById("rutaButton").style.display = 'none';
+    window.cercanaParaRuta = null;
+  } else {
+    listaCercanas.innerHTML = cercanas.map(est => `
+      <li><strong>${est.nombre}</strong> (${est.distancia.toFixed(2)} km) – Combustibles: ${est.combustibles.join(", ")}</li>
+    `).join("");
+    document.getElementById("rutaButton").style.display = 'block';
 
+    window.cercanaParaRuta = cercanas[0];
+  }
+}
     function actualizarEstadisticas() {
       const dpto = document.getElementById("departamentoSelect").value;
       const estacionesDpto = estaciones.filter(e => e.departamento === dpto);
@@ -568,41 +578,57 @@
     }
 
     function calcularDistancia(pos1, pos2) {
-      const R = 6371;
-      const dLat = (pos2.lat - pos1.lat) * Math.PI / 180;
-      const dLng = (pos2.lng - pos1.lng) * Math.PI / 180;
-      const lat1 = pos1.lat * Math.PI / 180;
-      const lat2 = pos2.lat * Math.PI / 180;
-      const a = Math.sin(dLat / 2) ** 2 +
-                Math.sin(dLng / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
-      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      return R * c;
-    }
+  const R = 6371;
+  const dLat = (pos2.lat - pos1.lat) * Math.PI / 180;
+  const dLng = (pos2.lng - pos1.lng) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(pos1.lat * Math.PI/180) * Math.cos(pos2.lat * Math.PI/180) * 
+    Math.sin(dLng/2) * Math.sin(dLng/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  return R * c;
+}
 
     function trazarRuta() {
-      if (window.cercanaParaRuta) {
-        const directionsService = new google.maps.DirectionsService();
-        directionsRenderer = new google.maps.DirectionsRenderer();
-        directionsRenderer.setMap(map);
-        
-        const request = {
-          origin: currentSurtidor.posicion,
-          destination: window.cercanaParaRuta.posicion,
-          travelMode: google.maps.TravelMode.DRIVING
-        };
-        
-        directionsService.route(request, (result, status) => {
-          if (status === google.maps.DirectionsStatus.OK) {
-            directionsRenderer.setDirections(result);
-          } else {
-            alert("No se pudo trazar la ruta.");
-          }
-        });
-      }
-    }
+  if (!window.cercanaParaRuta) {
+    alert("No hay estaciones cercanas con disponibilidad para trazar una ruta.");
+    return;
+  }
 
+  if (directionsRenderer) {
+    directionsRenderer.setMap(null);
+    directionsRenderer = null;
+  }
+
+  const directionsService = new google.maps.DirectionsService();
+  directionsRenderer = new google.maps.DirectionsRenderer();
+  directionsRenderer.setMap(map);
+  
+  const request = {
+    origin: currentSurtidor.posicion,
+    destination: window.cercanaParaRuta.posicion,
+    travelMode: google.maps.TravelMode.DRIVING,
+    provideRouteAlternatives: true
+  };
+  
+  directionsService.route(request, (result, status) => {
+    if (status === google.maps.DirectionsStatus.OK) {
+      directionsRenderer.setDirections(result);
+      
+
+      const route = result.routes[0];
+      const leg = route.legs[0];
+      alert(`Ruta trazada a ${window.cercanaParaRuta.nombre}\nDistancia: ${leg.distance.text}\nTiempo estimado: ${leg.duration.text}`);
+    } else {
+      alert("No se pudo trazar la ruta. Error: " + status);
+    }
+  });
+}
     cargarEstaciones();
   </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', cargarEstaciones);
+  </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=KEY&callback=initMap" async defer></script>
-</body>
-</html>
+  <body>
+  </html>
