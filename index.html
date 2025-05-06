@@ -403,42 +403,80 @@
         localStorage.setItem('favoriteStations', JSON.stringify(favorites));
       });
     }
-
-    function setupLocationButton() {
-      document.getElementById('locateMe').addEventListener('click', () => {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            (position) => {
-              const userLocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-              };
-              
-              map.setCenter(userLocation);
-              
-              new google.maps.Marker({
-                position: userLocation,
-                map: map,
-                title: "Mi ubicación",
-                icon: {
-                  path: google.maps.SymbolPath.CIRCLE,
-                  scale: 8,
-                  fillColor: "#4285F4",
-                  fillOpacity: 1,
-                  strokeWeight: 2,
-                  strokeColor: "white"
-                }
-              });
-            },
-            (error) => {
-              alert("No se pudo obtener tu ubicación: " + error.message);
-            }
-          );
-        } else {
-          alert("Tu navegador no soporta geolocalización");
-        }
-      });
+    function actualizarEstacionesCercanas(userLocation) {
+    const dpto = document.getElementById("departamentoSelect").value;
+    const estacionesDpto = estaciones.filter(e => e.departamento === dpto);
+    
+    const cercanas = estacionesDpto
+        .filter(est => Object.values(est.cantidad).some(c => c > 0))
+        .map(est => ({
+            ...est,
+            distancia: calcularDistancia(userLocation, est.posicion)
+        }))
+        .filter(est => est.distancia <= 5)
+        .sort((a, b) => a.distancia - b.distancia);
+    
+    const listaCercanas = document.getElementById("listaCercanas");
+    if (cercanas.length === 0) {
+        listaCercanas.innerHTML = `<li>No hay estaciones cercanas con disponibilidad.</li>`;
+        document.getElementById("rutaButton").style.display = 'none';
+    } else {
+        listaCercanas.innerHTML = cercanas.map(est => `
+            <li><strong>${est.nombre}</strong> (${est.distancia.toFixed(2)} km)</li>
+        `).join("");
+        document.getElementById("rutaButton").style.display = 'block';
     }
+}
+    function setupLocationButton() {
+    document.getElementById('locateMe').addEventListener('click', () => {
+        if (navigator.geolocation) {
+            const options = {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            };
+            
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    
+                    map.setCenter(userLocation);
+                    map.setZoom(15);
+                    
+                    if (window.userMarker) {
+                        window.userMarker.setMap(null);
+                    }
+                    
+                    window.userMarker = new google.maps.Marker({
+                        position: userLocation,
+                        map: map,
+                        title: "Mi ubicación actual",
+                        icon: {
+                            path: google.maps.SymbolPath.CIRCLE,
+                            scale: 10,
+                            fillColor: "#4285F4",
+                            fillOpacity: 1,
+                            strokeWeight: 3,
+                            strokeColor: "white"
+                        }
+                    });
+                    actualizarEstadisticas(userLocation);
+                    
+                    actualizarEstacionesCercanas(userLocation);
+                },
+                (error) => {
+                    console.error("Error de geolocalización:", error);
+                },
+                options
+            );
+        } else {
+            alert("Tu navegador no soporta geolocalización.");
+        }
+    });
+}
 
     function cambiarDepartamento() {
       const dpto = document.getElementById("departamentoSelect").value;
@@ -526,28 +564,33 @@
     window.cercanaParaRuta = cercanas[0];
   }
 }
-function actualizarEstadisticas() {
-      try {
+function actualizarEstadisticas(referencePoint = null) {
+    try {
         const dpto = document.getElementById("departamentoSelect").value;
         const estacionesDpto = estaciones.filter(e => e.departamento === dpto);
         const total = estacionesDpto.length;
         const conCombustible = estacionesDpto.filter(e => 
-          Object.values(e.cantidad).some(c => c > 0)
+            Object.values(e.cantidad).some(c => c > 0)
         ).length;
-        const cercanas = currentSurtidor 
-          ? estaciones.filter(est => 
-              est !== currentSurtidor && 
-              est.departamento === currentSurtidor.departamento &&
-              calcularDistancia(currentSurtidor.posicion, est.posicion) <= 5
-            ).length
-          : 0;
+        
+        const referencePosition = referencePoint || 
+                                (currentSurtidor ? currentSurtidor.posicion : null);
+        
+        let cercanas = 0;
+        if (referencePosition) {
+            cercanas = estacionesDpto.filter(est => {
+                if (currentSurtidor && est.nombre === currentSurtidor.nombre) return false;
+                return calcularDistancia(referencePosition, est.posicion) <= 5;
+            }).length;
+        }
+        
         document.getElementById("totalEstaciones").textContent = total;
         document.getElementById("estacionesConCombustible").textContent = conCombustible;
         document.getElementById("estacionesCercanas").textContent = cercanas;
-      } catch (error) {
+    } catch (error) {
         console.error("Error al actualizar estadísticas:", error);
-      }
     }
+}
 
     function filtrarDisponibilidad() {
       const filtro = document.getElementById("filtroDisponibilidad").value;
