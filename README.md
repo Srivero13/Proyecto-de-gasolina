@@ -55,11 +55,12 @@ Admin Panel (admin.html): Allows adding, editing, or deleting stations and updat
 Project Structure:
 
 Proyecto-de-gasolina/
-├── admin.html          # Admin interface
-├── index.html          # Main user interface
-├── estaciones.json     # JSON database of gas stations
-├── server.js           # Node.js server
-└── README.md           # Project documentation
+├── admin.html # The Admin interface for managing gas stations and prices.
+├── index.html # The main user interface displaying stations and prices.
+├── estaciones.json # A JSON database containing data about gas stations.
+├── server.js # The Node.js server that handles backend logic and routing.
+└── README.md # Project documentation with setup, usage instructions, and more.
+
 Contributing
 Contributions are welcome! To contribute:
 
